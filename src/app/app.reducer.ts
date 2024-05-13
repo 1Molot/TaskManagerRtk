@@ -36,7 +36,6 @@ const slice = createSlice({
           return action.type.endsWith("/rejected");
         },
         (state, action) => {
-          debugger;
           state.status = "failed";
 
           const { payload, error } = action;

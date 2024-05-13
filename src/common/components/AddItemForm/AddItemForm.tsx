@@ -20,7 +20,6 @@ export const AddItemForm = React.memo(({ addItem, disabled = false }: AddItemFor
           setTitle("");
         })
         .catch((err: RejectValueType) => {
-          debugger;
           if (err.data) {
             const messages = err.data.messages;
             setError(messages.length ? messages[0] : "Some error occurred");
